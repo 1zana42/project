@@ -12,3 +12,5 @@ class ItemModel(Base):
     price: Mapped[int] = mapped_column(nullable=False)
     quantity: Mapped[int] = mapped_column(nullable=False)
     characteristics: Mapped[str] = mapped_column(String(255), nullable=False)
+
+    purchases: Mapped[list["PurchasesModel"]] = relationship(back_populates="item")

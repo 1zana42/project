@@ -16,3 +16,5 @@ class UserModel(Base):
 
     role_id: Mapped[int] = mapped_column(ForeignKey("roles.id"), nullable=False)
     role: Mapped["RoleModel"] = relationship(back_populates="users")
+
+    purchases: Mapped[list["PurchasesModel"]] = relationship(back_populates="user")
