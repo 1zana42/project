@@ -14,6 +14,7 @@ from app.config import settings
 from app.models.users import UserModel
 from app.models.roles import RoleModel
 from app.models.roles import ItemModel
+from app.models.roles import ReviewModel
 from app.models.roles import PurchasesModel
 
 # this is the Alembic Config object, which provides

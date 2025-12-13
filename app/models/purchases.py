@@ -19,3 +19,6 @@ class PurchasesModel(Base):
 
     user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), nullable=False)
     user: Mapped["UserModel"] = relationship(back_populates="purchases")
+
+    item_price: Mapped[int] = mapped_column(ForeignKey("items.price"), nullable=False)
+    price: Mapped["ItemModel"] = relationship(back_populates="purchases")
